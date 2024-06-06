@@ -34,12 +34,12 @@ CREATE TABLE results(
 
 /* Replace path with ABSOLUTE PATH ON FILESYSTEM */
 COPY goalscorers(date, home_team, away_team, team, scorer, minute, own_goal, penalty)
-FROM '/Users/bernardo/Desktop/DIS/FootballStats/data/goalscorers.csv'
+FROM '/ABSOLUTE/PATH/TO/goalscorers.csv'
 DELIMITER ','
 CSV HEADER;
 
 COPY results(game_id, date, home_team, away_team, home_score, away_score, tournament, city, country, neutral)
-FROM '/Users/bernardo/Desktop/DIS/FootballStats/data/results.csv'
+FROM '/ABSOLUTE/PATH/TO/results.csv'
 DELIMITER ','
 CSV HEADER;
 

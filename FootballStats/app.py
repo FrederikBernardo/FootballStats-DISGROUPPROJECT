@@ -5,7 +5,8 @@ import psycopg2
 from flask_bcrypt import Bcrypt
 import re
 
-db = "dbname='footballstats' user='bernardo' password='root' host='localhost' port='5432'"
+""" REMEMBER TO CHANGE VALUES"""
+db = "dbname='XXX' user='XXX' password='XXX' host='localhost' port='5432'"
 
 conn = psycopg2.connect(db)
 

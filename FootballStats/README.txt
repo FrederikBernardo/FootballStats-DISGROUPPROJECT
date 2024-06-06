@@ -1,22 +1,29 @@
 How to run FootballStats project. Assuming python3 and pip3 is installed:
 
-1. Install requirements in the terminal:
+1. Make the virtual enviornment so you have the folder 'env' in the terminal:
+virtualenv env
+
+2. Activation of the virtual env in the terminal:
+source env/bin/activate
+
+3. Install requirements in the terminal:
 pip3 install -r requirements.txt
 
-3. In app.py, set your own database, username and password.
+NOTE: Make sure you are on the right file path in the terminal
 
-3. In 'Initialize.sql' change the directory to the full path of 'goalscorers.csv' and 'results.csv'.
+4. In app.py, set your own database, username and password.
+
+5. In 'Initialize.sql' change the directory to the absolute path of 'goalscorers.csv' and 'results.csv'.
 NOTE: If this is not run as super-user there might be issues with using COPY within the .SQL file.
 if this is the case follow the instructions further down.
 
-4. Initialize the database by running the SQL file in the terminal:
+6. Initialize the database by running the SQL file in the terminal:
 psql -d dbname -U user -f sql/Initialize.sql
 
-5. Activation of the virtual env in the terminal:
-source env/bin/activate
+7. Run the web application in the terminal:
+python3 app.py 
 
-6. Run the web application in the terminal:
-python3 app.py  
+8. Copy the URL that appears in the terminal, into your browser and enjoy!
 
 How to use the web application:
 
