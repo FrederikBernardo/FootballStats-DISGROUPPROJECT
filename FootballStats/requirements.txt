@@ -1,0 +1,8 @@
+virtualenv
+flask
+flask-sqlalchemy
+flask-wtf
+flask-bcrypt
+psycopg2
+wtforms
+flask-login

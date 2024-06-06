@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h1 class="title">Top Teams</h1>
+
+    <p class="funfact">The total number of goals scored is: {{ total_goals }}</p>
+
+    <table class="team-table">
+        <thead>
+            <tr>
+                <th>Teams</th>
+                <th>Wins</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for team in most_wins_team %}
+                <tr>
+                    <td>{{ team[0] }}</td>
+                    <td>{{ team[1] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

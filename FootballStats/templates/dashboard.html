@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h1 class="dashboard">Dashboard</h1>
+
+    <div class="search-container">
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search for your favourite player">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+        <div class="noresult-message">
+            {% if message %}
+                <p>{{ message }}</p>
+            {% endif %}
+        </div>
+        <div class="searcher">
+        {% if results %}
+            {% if player %}
+                <h2>Search Results for {{ player }}:</h2>
+            {% endif %}
+                <table>
+                    <tr>
+                        <th>Team</th>
+                        <th>Date</th>
+                        <th>Home Team</th>
+                        <th>Away Team</th>
+                        <th>Goals</th>
+                        <th>Own Goals</th>
+                        <th>Penalty Goals</th>
+                    </tr>
+                    {% for result in results %}
+                        <tr>
+                            <td>{{ result[0] }}</td>
+                            <td>{{ result[1] }}</td>
+                            <td>{{ result[2] }}</td>
+                            <td>{{ result[3] }}</td>
+                            <td>{{ result[4] }}</td>
+                            <td>{{ result[5] }}</td>
+                            <td>{{ result[6] }}</td>
+                            <td>{{ result[7] }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+        </div>
+        {% endif %}
+    <div class="image-container">
+        <a href="{{ url_for('players') }}">
+            <img src="../static/images/CR7.png" alt="Players" class="dashboard-image">
+            <p class="image-caption">Player stats</p>
+        </a>
+        <a href="{{ url_for('teams') }}">
+            <img src="../static/images/Team.png" alt="Teams" class="dashboard-image">
+            <p class="image-caption">Team stats</p>
+        </a>
+    </div>
+
+{% endblock %}

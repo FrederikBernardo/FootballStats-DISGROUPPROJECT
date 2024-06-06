@@ -1,0 +1,125 @@
+body {
+    color: black;
+}
+
+.createaccount-form {
+    color: blue;
+    background-image: url('../images/Ball.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.createaccount-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link-section {
+    margin-top: 20px;
+}
+
+.welcome {
+    margin-bottom: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dashboard-image {
+    width: 300px;
+    height: auto;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input[type="text"]{
+    width: 115%;
+}
+
+.searcher {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.noresult-message {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 16px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    margin-top: 100px;
+}
+
+.player-table {
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-table {
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
